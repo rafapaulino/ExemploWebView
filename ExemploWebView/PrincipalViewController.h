@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PrincipalViewController : UIViewController
+@interface PrincipalViewController : UIViewController <UIWebViewDelegate, UITextFieldDelegate, UISearchBarDelegate>
+
+@property (nonatomic, weak) IBOutlet UIWebView *meuWebView;
+@property (nonatomic, weak) IBOutlet UITextField *txtEndereco;
+@property (nonatomic, weak) IBOutlet UILabel *lblTitulo;
+@property (nonatomic, weak) IBOutlet UISearchBar *barraBusca;
+@property (nonatomic, assign) BOOL pesquisando;
+
+
+-(IBAction)exibirBarraBusca:(id)sender;
 
 @end
